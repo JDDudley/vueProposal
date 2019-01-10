@@ -95,6 +95,7 @@
         row-key="name"
         hide-bottom
       />
+      <p class="totalCost">TOTAL: ${{ totalCost }}</p>
     </section>
     <section id="project-terms" class="q-pa-md">
       <h3 class="text-center">Project Terms</h3>
@@ -220,17 +221,30 @@ export default {
       costTableData: [
         {
           name: 'Phase 1 - Front-End Website Creation',
-          cost: '$4,000'
+          cost: 4000
         },
         {
           name: 'Phase 2 - Integration & Web App Development',
-          cost: '6,000'
+          cost: 6000
         },
         {
           name: 'Phase 3 - Testing & Deployment',
-          cost: '$4,000'
+          cost: 4000
         }
+      ],
+      costTable: [
+        'Phase 1 - Front-End Website Creation'
       ]
+    }
+  },
+  computed: {
+    totalCost: function () {
+      var phases = this.costTableData.length
+      var cost = 0
+      for (var x = 0; x < phases; x++) {
+        cost = cost + this.costTableData[x].cost
+      }
+      return cost
     }
   }
 }
