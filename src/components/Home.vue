@@ -95,7 +95,7 @@
         row-key="name"
         hide-bottom
       />
-      <p class="totalCost">TOTAL: ${{ totalCost }}</p>
+      <!-- <p class="totalCost">TOTAL: ${{ totalCost }}</p> -->
     </section>
     <section id="project-terms" class="q-pa-md">
       <h3 class="text-center">Project Terms</h3>
@@ -165,7 +165,7 @@ export default {
         },
         {
           name: 'date',
-          label: 'Projected Completion Date',
+          label: 'Projected Timeline',
           required: true,
           align: 'right',
           field: 'date'
@@ -174,15 +174,15 @@ export default {
       timelineTableData: [
         {
           name: 'Phase 1 - Front-End Website Creation',
-          date: 'January 1, 2019'
+          date: '15 Days'
         },
         {
           name: 'Phase 2 - Integration & Web App Development',
-          date: 'February 1, 2019'
+          date: '15 Days'
         },
         {
           name: 'Phase 3 - Testing & Deployment',
-          date: 'March 1, 2019'
+          date: '10 Days'
         }
       ],
       timeline: [
